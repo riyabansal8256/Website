@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Login/Signup</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="c2">
+            <form action="#" onsubmit="return FormSubmit(this);">
+                <div class="sign-h"><h2>Signup</h2></div>
+    
+               <img class="img2" src="img/profile1.png" alt="">
+    
+               <div class="form-name">
+                    <input class="fill-name" type="name" name="Name" placeholder="First name" required>
+                    <input class="fill-name" type="name" name="Name" placeholder="Last name" required>
+               </div>
+    
+               <div class="form-group1">
+                    <input class="fill" type="tel" name="number" placeholder="Phone Number" pattern="\d{10}" title="Please enter a 10-digit phone number" required>
+               </div>
+    
+    
+                <div class="form-group1">
+                    <input class="fill" type="email" name="username_or_email" placeholder="👨🏻‍💻 Username or email address" required>
+                </div>
+    
+                <div class="form-group2">
+                    <input class="fill" type="password" name="password" placeholder="Password" required>
+                </div>
+                <p class="forgot">Forgot Password?</p>
+                <br>
+                <button type="submit">Signup</button>
+    
+                <div class="login">
+                    <p class="login1">Have an account</p>
+                    <p class="login2" onclick="showLogin()">Login Now</p>
+                </div>
+            </form>
+            
+        </div>
+
+        <div class="c3">
+            <form action="#" onsubmit="return FormSubmit(this);">
+                <div class="login-h"><h2>Login</h2></div>
+    
+               <img src="profile1.png" alt="">
+    
+                <div class="form-group1">
+                    <input class="fill" type="email" name="username_or_email" placeholder="👨🏻‍💻 Username or email address" required>
+                </div>
+    
+                <div class="form-group2">
+                    <input class="fill" type="password" name="password" placeholder="Password" required>
+                </div>
+                <p class="forgot">Forgot Password?</p>
+                <br>
+                <button type="submit">Login</button>
+    
+                <div class="sign">
+                    <p class="sign1">Create an account</p>
+                    <p class="sign2" onclick="showSignup()">Signup Now</p>
+                </div>
+            </form>
+            
+        </div>
+  </div>
+
+  <script>
+    function showSignup() {
+        document.querySelector('.c2').style.display = 'block';
+        document.querySelector('.c3').style.display = 'none';
+    }
+
+    function showLogin() {
+        document.querySelector('.c3').style.display = 'block';
+        document.querySelector('.c2').style.display = 'none';
+    }
+
+    function FormSubmit(form) {
+        window.location.href = 'FurnitureX.html';
+        return false;
+    }
+
+</script>
+
+    
+</body>
+</html>
