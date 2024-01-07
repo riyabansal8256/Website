@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="review.css">
+    <script src = "./buy.js"></script>
+    <title>My Account</title>
+    <script>
+        function rateProduct(stars) {
+            const allStars = document.querySelectorAll('.star');
+            allStars.forEach(star => star.classList.remove('rated'));
+    
+            const ratedStars = document.querySelectorAll('.star:nth-child(-n+' + stars + ')');
+            ratedStars.forEach(star => star.classList.add('rated'));
+    
+            console.log(`${stars} star`);
+        }
+
+        function submitReview() {
+        alert("Review submitted!");
+        }
+    </script>
+</head>
+
+<body class="buy-body">
+
+    <div class="container">
+      <form action="#">
+
+        <div class="review">
+            <h2>Write a Review</h2>
+            <p>Rate your experience:</p>
+            <div class="star-rating">
+                <span class="star" onclick="rateProduct(1)">&#9733;</span>
+                <span class="star" onclick="rateProduct(2)">&#9733;</span>
+                <span class="star" onclick="rateProduct(3)">&#9733;</span>
+                <span class="star" onclick="rateProduct(4)">&#9733;</span>
+                <span class="star" onclick="rateProduct(5)">&#9733;</span>
+            </div>
+            <textarea placeholder="Write your review here..."></textarea>
+            <a href="FurnitureX.html"><button type="button" onclick="submitReview()">Submit Review</button></a>
+        </div>
+
+      </form> 
+    </div>
+       
+</body>
+</html>
